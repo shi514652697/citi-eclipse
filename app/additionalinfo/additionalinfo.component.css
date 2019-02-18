@@ -1,0 +1,31 @@
+.toppane
+{
+   background-color: #337ab7;
+   margin-left: -15px;
+   margin-right: -15px; 
+   padding-top: 10px;
+   padding-left: 10px; 
+   color: #fff;
+}
+
+hr.style1{
+	border-top: 1px solid #8c8b8b;
+    margin-left: -15px;
+   margin-right: -15px;
+}
+
+h5 {
+    font-weight: bold;
+    color: #337ab7;
+}
+
+.showpersonsection {
+    display: block;
+}
+
+.hidepersonsection {
+display: none;
+}
+
+.form-group.required .control-label:after
+ {content:"*";color:red;}
