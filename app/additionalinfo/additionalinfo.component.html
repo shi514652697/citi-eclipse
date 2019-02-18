@@ -76,18 +76,18 @@
         <form #userForm="ngForm" >
            <hr class="style1">
           <h5 (click)="togglePersonDetails()"><span class="glyphicon" [ngClass]="{'glyphicon-chevron-down':hidePersonDetails, ' glyphicon-chevron-up':showPersonDetails}"></span> Personal Details
-          <span [ngClass]="{'glyphicon glyphicon-ok': personOk}"></span>
+          <span [ngClass]="{'glyphicon glyphicon-ok': fname.valid && lname.valid && email.valid}"></span>
           </h5>
           <div [ngClass]="{showpersonsection:showPersonDetails,hidepersonsection:hidePersonDetails}">
           <div class="row">
             <div class="form-group required col-xs-9 col-sm-4 col-md-4 col-lg-4">
               <label for="fname" class="control-label">First Name</label>
-              <input type="text" #name="ngModel" class="form-control" id="fname" name="fname" (change)="validatePerson(name.valid)" placeholder="Enter First Name" required  ngModel>
+              <input type="text" #fname="ngModel" class="form-control" id="fname" name="fname"  placeholder="Enter First Name" required  ngModel>
              
             </div>
             <div class="form-group required col-xs-9 col-sm-4 col-md-4 col-lg-4">
               <label for="lname" class="control-label">Last Name</label>
-              <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Last Name" required ngModel>
+              <input type="text" #lname="ngModel"  class="form-control" id="lname" name="lname" placeholder="Enter Last Name" required ngModel>
             </div>
 
             <div class="form-group col-xs-9 col-sm-4 col-md-4 col-lg-4">
@@ -97,8 +97,8 @@
           </div>
           <div class="row">
             <div class="form-group required col-xs-9 col-sm-4 col-md-4 col-lg-4">
-              <label for="fname" class="control-label">Email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required ngModel>
+              <label for="email" class="control-label">Email</label>
+              <input type="email" #email="ngModel" class="form-control" id="email" name="email" placeholder="Enter Email" required ngModel>
             </div>
           </div>
           </div>
